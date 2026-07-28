@@ -1,228 +1,448 @@
-# 🚀 Production 3-Tier Flask Application on AWS | Terraform | Docker | Auto Scaling
+# 🚀 Production AWS Three-Tier Flask Application | CloudOps Project
 
-## 📌 Overview
+![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
+![Terraform](https://img.shields.io/badge/Infrastructure-Terraform-purple)
+![Docker](https://img.shields.io/badge/Container-Docker-blue)
+![Python](https://img.shields.io/badge/API-Flask-green)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue)
 
-A production-grade 3-tier cloud application deployed on AWS using **Terraform Infrastructure as Code (IaC), Docker, Amazon EC2 Auto Scaling, Application Load Balancer, and Amazon RDS PostgreSQL**.
+## 📌 Project Overview
 
-This project demonstrates real-world Cloud Engineering and DevOps practices by designing a secure, scalable, highly available AWS architecture with automated infrastructure provisioning and containerized application deployment.
+A production-style three-tier cloud application deployed on AWS demonstrating real-world CloudOps and DevOps practices.
 
-## 🏗️ Architecture
+This project showcases hands-on experience with **AWS architecture design, Infrastructure as Code (Terraform), Docker deployment, networking, load balancing, auto scaling, and database integration**.
 
-```
-                    Users
-                      |
-                      |
-          AWS Application Load Balancer
-                      |
-                      |
-              Target Group (Port 8000)
-                      |
-          ---------------------------
-          |                         |
-      EC2 Instance              EC2 Instance
-      Docker Flask API          Docker Flask API
-          |
-          |
-      Private Network
-          |
-          |
-    Amazon RDS PostgreSQL
-```
+---
 
-## ☁️ AWS Services Implemented
+## 🏗️ AWS Three-Tier Architecture
+                Users
+                  |
+                  |
+    Application Load Balancer (ALB)
+                  |
+                  |
+    EC2 Auto Scaling Group
+                  |
+                  |
+      Dockerized Flask REST API
+                  |
+                  |
+      Amazon RDS PostgreSQL
 
-- Amazon VPC with public and private subnet architecture
-- Internet Gateway and NAT Gateway
-- Route Tables and Security Groups
-- Amazon EC2 with Launch Template
-- EC2 Auto Scaling Group
-- Application Load Balancer
-- Target Group Health Checks
-- Amazon RDS PostgreSQL
-- AWS Systems Manager Session Manager
+Infrastructure is fully automated using Terraform.
+
+---
+
+## ☁️ AWS Services & Infrastructure
+
+✅ Amazon VPC with secure networking  
+✅ EC2 Launch Template & Auto Scaling Group  
+✅ Application Load Balancer with health checks  
+✅ Amazon RDS PostgreSQL database  
+✅ IAM roles and Security Groups  
+✅ AWS Systems Manager access  
+✅ Terraform Infrastructure as Code  
+
+---
 
 ## 🛠️ Technology Stack
 
-| Layer | Technology |
-|---|---|
-| Cloud Platform | AWS |
-| Infrastructure | Terraform |
-| Backend | Python Flask |
-| Production Server | Gunicorn |
-| Containerization | Docker |
-| Database | PostgreSQL 16 |
-| Operating System | Ubuntu Linux |
-| Networking | VPC, TCP/IP, Security Groups |
+**Cloud:** AWS  
+**Infrastructure:** Terraform  
+**Containerization:** Docker  
+**Backend:** Python Flask REST API  
+**Database:** PostgreSQL  
+**CI/CD:** GitHub Actions  
+**Operating System:** Linux  
+**Version Control:** Git & GitHub  
 
-## ⚙️ Deployment Flow
+---
 
-```
-Terraform
-    ↓
-AWS Infrastructure Creation
-    ↓
-Docker Container Deployment
-    ↓
-EC2 Auto Scaling
-    ↓
-Application Load Balancer
-    ↓
-Flask API + PostgreSQL Database
-```
+## ⭐ Key Engineering Achievements
 
-## 🚀 Key Features
+✅ Designed production-ready AWS three-tier architecture  
+✅ Automated infrastructure deployment using Terraform  
+✅ Containerized Flask application with Docker  
+✅ Implemented scalable EC2 Auto Scaling architecture  
+✅ Configured Application Load Balancer traffic routing  
+✅ Integrated Flask API with Amazon RDS PostgreSQL  
+✅ Applied cloud security best practices  
+✅ Performed production troubleshooting and health validation  
 
-✅ Infrastructure automated using Terraform  
-✅ Production-ready AWS 3-tier architecture  
-✅ Dockerized Flask REST API  
-✅ High availability using Application Load Balancer  
-✅ Auto Scaling with self-healing EC2 instances  
-✅ Secure private RDS database deployment  
-✅ Health monitoring through ALB checks  
-✅ Cloud troubleshooting and deployment validation  
+---
 
-## 🔐 Security Implementation
 
-- Database deployed inside private subnet
-- RDS access restricted through EC2 Security Group
-- Application traffic controlled through ALB
-- IAM role-based EC2 management
-- No direct SSH dependency
-- Least privilege security rules
+## 🚀 Production Deployment & Application Health Verification
 
-## 🩺 Application Validation
+The Flask REST API is deployed as a Dockerized application running on an AWS EC2 Auto Scaling environment behind an Application Load Balancer. The deployment demonstrates production-grade cloud practices including containerization, high availability, automated scaling, and continuous health monitoring.
 
-Health endpoint:
+**🐳 Container Image**  
+`ghcr.io/ipshitachaudhuri/flask-api:v1.0.8`
 
-```
-GET /health
-```
+**⚙️ Runtime Configuration**  
+- Application Framework: Python Flask REST API  
+- Container Platform: Docker  
+- Compute Platform: Amazon EC2 Auto Scaling Group  
+- Load Balancer: AWS Application Load Balancer  
+- Application Port: `8000`
 
-Response:
+**🌐 Live Production Health Endpoint**  
+
+[➡️ Access Production Health Check](http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health)
+
+**✅ Verified Response**
 
 ```json
 {
   "status": "healthy"
 }
-```
 
-Production validation:
+📸 Deployment Evidence
+Terraform Infrastructure Deployment
 
-```
-ALB
- |
- ↓
-Healthy Target
- |
- ↓
-Flask Application
- |
- ↓
-PostgreSQL Database
-```
+EC2 Auto Scaling Environment
 
-## 📂 Repository Structure
+Application Load Balancer
 
-```
-three-tier-aws-app/
+Target Group Health Status
 
-├── terraform/
-│   ├── modules/
-│   │   ├── vpc/
-│   │   ├── ec2/
-│   │   ├── alb/
-│   │   ├── rds/
-│   │   └── security/
-│
-├── screenshots/
-│
-└── README.md
-```
+Amazon RDS PostgreSQL
 
-## 📸 Project Evidence
+AWS VPC Architecture
 
-Included screenshots demonstrate:
+Application Health Verification
 
-- Terraform deployment success
-- AWS VPC architecture
-- EC2 Auto Scaling environment
-- Application Load Balancer configuration
-- Target Group healthy status
-- RDS PostgreSQL availability
-- Live application health response
+🔐 DevOps & Cloud Skills Demonstrated
 
-## 🎯 Skills Demonstrated
+AWS Cloud Architecture • Terraform • Docker • Linux • Python Flask • PostgreSQL • Networking • Load Balancing • Auto Scaling • GitHub Actions • Infrastructure Automation
 
-**Cloud Engineering**
-- AWS Architecture Design
-- Infrastructure as Code
-- High Availability Systems
-- Cloud Security
+👩‍💻 Author
+Ipshita Chaudhuri
 
-**DevOps**
-- Docker Containerization
-- Linux Administration
-- Deployment Automation
-- Production Troubleshooting
+☁️ Cloud & DevOps Engineer
+🏆 AWS Certified Solutions Architect – Associate
+🌐 CCNA Certified
 
-**Networking**
-- VPC Design
-- Subnetting
-- Routing
-- Load Balancing
-- Security Groups
+Skills: AWS | Terraform | Docker | Kubernetes | Linux | GitHub Actions | Python | Networking
 
-**Backend Development**
-- Python Flask API
-- PostgreSQL Integration
-- Gunicorn Deployment
- 
-
-## 📸 Deployment Evidence
-
-### 1. Terraform Infrastructure Deployment
-
-![Terraform Apply](images/01-Terraform-Apply-Success-and-Outputs.png)
+⭐ Built as a hands-on production cloud engineering project demonstrating modern AWS deployment and DevOps practices.
 
 
-### 2. EC2 Auto Scaling Group Running
+This is a **single README page** — recruiter opens GitHub → sees architecture, skills, proof screenshots, and your profile without scrolling through multiple documents.
+http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health..  how can add this arrow sign
 
-![EC2 Auto Scaling](images/02-EC2-AutoScaling-Running.png)
+If you mean the arrow symbol (→) before your URL in README, just type or copy this:
+
+→ http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
+
+Example:
+
+Production Health Check:
+
+→ http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
+
+Other arrow styles you can use:
+
+➜ http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
+
+➤ http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
+
+➡️ http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
+
+For a professional GitHub README, I recommend:
+
+🔗 Health Check Endpoint:
+→ http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
+no after sentence to go to directly web
+
+You mean you want the URL to be clickable after the sentence (when a recruiter clicks it, it opens the website). In GitHub README, use a Markdown link.
+
+Use this format:
+
+🔗 Health Check Endpoint:  
+[Open Application Health Check](http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health)
+
+It will display as:
+
+🔗 Health Check Endpoint:
+Open Application Health Check ← clickable link
+
+For a more professional README style:
+
+## 🚀 Live Application Health Check
+
+Application status can be verified here:
+
+[➡️ Open Production Health Check](http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health)
+
+Recruiters can click directly and see:
+
+{
+  "status": "healthy"
+}
+
+Application Port: 8000 http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
+
+the full thing in one page not separat
+
+Replace your Application Deployment section with this single copy-paste block:
+
+## 🚀 Application Deployment & Health Verification
+
+The Flask REST API is containerized using Docker and deployed on AWS EC2 Auto Scaling behind an Application Load Balancer for scalable and reliable cloud operations.
+
+**Docker Image:**  
+`ghcr.io/ipshitachaudhuri/flask-api:v1.0.8`
+
+**Application Port:** `8000`
+
+**🔗 Production Health Check:**  
+[➡️ Open Live Health Check](http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health)
+
+**Response:**
+
+```json
+{
+  "status": "healthy"
+}
+
+This will appear as **one clean section** in your GitHub README with a clickable link.
+## 🚀 Application Deployment & Health Verification
+
+The Flask REST API is containerized using Docker and deployed on AWS EC2 Auto Scaling behind an Application Load Balancer for scalable and reliable cloud operations.
+
+**Docker Image:**  
+ghcr.io/ipshitachaudhuri/flask-api:v1.0.8
+
+**Application Port:** 8000
+
+**🔗 Production Health Check:**  
+[➡️ Open Live Health Check](http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health)
+
+**Response:**
 
 
-### 3. Application Load Balancer
+json
+{
+  "status": "healthy"
+}. make it more proffesional
 
-![Application Load Balancer](images/03-Application-Load-Balancer.png)
+Use this more polished Cloud Engineer / DevOps recruiter-style version:
+
+## 🚀 Production Deployment & Application Health Verification
+
+The Flask REST API is deployed as a Dockerized application running on an AWS EC2 Auto Scaling environment behind an Application Load Balancer. The deployment demonstrates production-grade cloud practices including containerization, high availability, automated scaling, and continuous health monitoring.
+
+**🐳 Container Image**  
+`ghcr.io/ipshitachaudhuri/flask-api:v1.0.8`
+
+**⚙️ Runtime Configuration**  
+- Application Framework: Python Flask REST API  
+- Container Platform: Docker  
+- Compute Platform: Amazon EC2 Auto Scaling Group  
+- Load Balancer: AWS Application Load Balancer  
+- Application Port: `8000`
+
+**🌐 Live Production Health Endpoint**  
+
+[➡️ Access Production Health Check](http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health)
+
+**✅ Verified Response**
+
+```json
+{
+  "status": "healthy"
+}
+
+The successful health check confirms that the application is running correctly, reachable through the AWS Load Balancer, and successfully integrated with the production infrastructure.
 
 
-### 4. Target Group Health Check
+📸 Deployment Evidence
+Terraform Infrastructure Deployment
 
-![Target Group Healthy](images/04-Target-Group-Healthy.png)
+EC2 Auto Scaling Environment
+
+Application Load Balancer
+
+Target Group Health Status
+
+Amazon RDS PostgreSQL
+
+AWS VPC Architecture
+
+Application Health Verification
+
+🔐 DevOps & Cloud Skills Demonstrated
+
+AWS Cloud Architecture • Terraform • Docker • Linux • Python Flask • PostgreSQL • Networking • Load Balancing • Auto Scaling • GitHub Actions • Infrastructure Automation
+
+👩‍💻 Author
+Ipshita Chaudhuri
+
+☁️ Cloud & DevOps Engineer
+🏆 AWS Certified Solutions Architect – Associate
+🌐 CCNA Certified
+
+Skills: AWS | Terraform | Docker | Kubernetes | Linux | GitHub Actions | Python | Networking
+
+⭐ Built as a hands-on production cloud engineering project demonstrating modern AWS deployment and DevOps practices.
 
 
-### 5. Amazon RDS PostgreSQL Database
+This is a **single README page** — recruiter opens GitHub → sees architecture, skills, proof screenshots, and your profile without scrolling through multiple documents.
+http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health..  how can add this arrow sign
 
-![RDS PostgreSQL](images/05-RDS-PostgreSQL-Available.png)
+If you mean the arrow symbol (→) before your URL in README, just type or copy this:
+
+→ http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
+
+Example:
+
+Production Health Check:
+
+→ http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
+
+Other arrow styles you can use:
+
+➜ http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
+
+➤ http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
+
+➡️ http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
+
+For a professional GitHub README, I recommend:
+
+🔗 Health Check Endpoint:
+→ http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
+no after sentence to go to directly web
+
+You mean you want the URL to be clickable after the sentence (when a recruiter clicks it, it opens the website). In GitHub README, use a Markdown link.
+
+Use this format:
+
+🔗 Health Check Endpoint:  
+[Open Application Health Check](http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health)
+
+It will display as:
+
+🔗 Health Check Endpoint:
+Open Application Health Check ← clickable link
+
+For a more professional README style:
+
+## 🚀 Live Application Health Check
+
+Application status can be verified here:
+
+[➡️ Open Production Health Check](http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health)
+
+Recruiters can click directly and see:
+
+{
+  "status": "healthy"
+}
+
+Application Port: 8000 http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
+
+the full thing in one page not separat
+
+Replace your Application Deployment section with this single copy-paste block:
+
+## 🚀 Application Deployment & Health Verification
+
+The Flask REST API is containerized using Docker and deployed on AWS EC2 Auto Scaling behind an Application Load Balancer for scalable and reliable cloud operations.
+
+**Docker Image:**  
+`ghcr.io/ipshitachaudhuri/flask-api:v1.0.8`
+
+**Application Port:** `8000`
+
+**🔗 Production Health Check:**  
+[➡️ Open Live Health Check](http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health)
+
+**Response:**
+
+```json
+{
+  "status": "healthy"
+}
+
+This will appear as **one clean section** in your GitHub README with a clickable link.
+## 🚀 Application Deployment & Health Verification
+
+The Flask REST API is containerized using Docker and deployed on AWS EC2 Auto Scaling behind an Application Load Balancer for scalable and reliable cloud operations.
+
+**Docker Image:**  
+ghcr.io/ipshitachaudhuri/flask-api:v1.0.8
+
+**Application Port:** 8000
+
+**🔗 Production Health Check:**  
+[➡️ Open Live Health Check](http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health)
+
+**Response:**
 
 
-### 6. AWS VPC Architecture
+json
+{
+  "status": "healthy"
+}. make it more proffesional
 
-![VPC Resource Map](images/06-VPC-Resource-Map.png)
+Use this more polished Cloud Engineer / DevOps recruiter-style version:
+
+## 🚀 Production Deployment & Application Health Verification
+
+The Flask REST API is deployed as a Dockerized application running on an AWS EC2 Auto Scaling environment behind an Application Load Balancer. The deployment demonstrates production-grade cloud practices including containerization, high availability, automated scaling, and continuous health monitoring.
+
+**🐳 Container Image**  
+`ghcr.io/ipshitachaudhuri/flask-api:v1.0.8`
+
+**⚙️ Runtime Configuration**  
+- Application Framework: Python Flask REST API  
+- Container Platform: Docker  
+- Compute Platform: Amazon EC2 Auto Scaling Group  
+- Load Balancer: AWS Application Load Balancer  
+- Application Port: `8000`
+
+**🌐 Live Production Health Endpoint**  
+
+[➡️ Access Production Health Check](http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health)
+
+**✅ Verified Response**
+
+```json
+{
+  "status": "healthy"
+}
 
 
-### 7. Application Health Verification
+}
 
-![Application Health Check](images/07-Application-Health-Check.png)
+📸 Deployment Evidence
+Terraform Infrastructure Deployment
+
+EC2 Auto Scaling Environment
+
+Application Load Balancer
+
+Target Group Health Status
+
+Amazon RDS PostgreSQL
+
+AWS VPC Architecture
+
+Application Health Verification
+
+🔐 DevOps & Cloud Skills Demonstrated
+
+AWS Cloud Architecture • Terraform • Docker • Linux • Python Flask • PostgreSQL • Networking • Load Balancing • Auto Scaling • GitHub Actions • Infrastructure Automation
+
+👩‍💻 Author
+Ipshita Chaudhuri
+
+☁️ Cloud & DevOps Engineer
+🏆 AWS Certified Solutions Architect – Associate
+🌐 CCNA Certified
+
+Skills: AWS | Terraform | Docker | Kubernetes | Linux | GitHub Actions | Python | Networking
 
 
-## 👩‍💻 Author
-
-# Ipshita Chaudhuri
-
-Cloud & DevOps Engineer  
-AWS Certified Solutions Architect – Associate | CCNA
-
-Skills:
-AWS | Terraform | Docker | Linux | GitHub Actions | Networking | Python
-
-Building scalable, secure, and automated cloud solutions.    
