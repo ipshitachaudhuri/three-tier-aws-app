@@ -176,6 +176,44 @@ Included screenshots demonstrate:
 - Python Flask API
 - PostgreSQL Integration
 - Gunicorn Deployment
+ 
+
+## 📸 Deployment Evidence
+
+### 1. Terraform Infrastructure Deployment
+
+![Terraform Apply](images/01-Terraform-Apply-Success-and-Outputs.png)
+
+
+### 2. EC2 Auto Scaling Group Running
+
+![EC2 Auto Scaling](images/02-EC2-AutoScaling-Running.png)
+
+
+### 3. Application Load Balancer
+
+![Application Load Balancer](images/03-Application-Load-Balancer.png)
+
+
+### 4. Target Group Health Check
+
+![Target Group Healthy](images/04-Target-Group-Healthy.png)
+
+
+### 5. Amazon RDS PostgreSQL Database
+
+![RDS PostgreSQL](images/05-RDS-PostgreSQL-Available.png)
+
+
+### 6. AWS VPC Architecture
+
+![VPC Resource Map](images/06-VPC-Resource-Map.png)
+
+
+### 7. Application Health Verification
+
+![Application Health Check](images/07-Application-Health-Check.png)
+
 
 ## 👩‍💻 Author
 
