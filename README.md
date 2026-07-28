@@ -131,21 +131,6 @@ Skills: AWS | Terraform | Docker | Kubernetes | Linux | GitHub Actions | Python 
 This is a **single README page** — recruiter opens GitHub → sees architecture, skills, proof screenshots, and your profile without scrolling through multiple documents.
 http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health..  how can add this arrow sign
 
-If you mean the arrow symbol (→) before your URL in README, just type or copy this:
-
-→ http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
-
-Example:
-
-Production Health Check:
-
-→ http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
-
-Other arrow styles you can use:
-
-➜ http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
-
-➤ http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
 
 ➡️ http://production-alb-1792429773.eu-central-1.elb.amazonaws.com/health
 
